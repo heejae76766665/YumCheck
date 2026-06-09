@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YUMCHECK — Check It. Yum It.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="24" cy="20" r="14" stroke="#4a6f1e" stroke-width="3"/>
+      <circle cx="24" cy="20" r="9" fill="#4a6f1e"/>
+      <path d="M19 20l3 3 5-5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="6" y="9" width="3" height="14" rx="1.5" fill="#4a6f1e"/>
+      <circle cx="7.5" cy="7" r="2.5" fill="#4a6f1e"/>
+    </svg>
+    <span class="nav-logo-text">YUMCHECK</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#problem">문제</a></li>
+    <li><a href="#pipeline">기술</a></li>
+    <li><a href="#features">기능</a></li>
+    <li><a href="#how">이용방법</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">시작하기 →</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero" style="position:relative;">
+  <div class="particles"></div>
+
+  <div class="hero-left">
+    <div class="hero-badge">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      2026 실험실창업탐색팀(Tex-Corps) 발표평가
+    </div>
+    <h1 class="hero-title">Check It.<br>Yum It.</h1>
+    <p class="hero-sub">
+      <strong>AI가 음식성분을 분석해</strong> 알러지 위험을 알려주는<br>
+      스마트 푸드 체크 서비스
+    </p>
+    <div class="hero-actions">
+      <a href="#pipeline" class="btn-primary">
+        기술 알아보기
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#how" class="btn-outline">이용 방법 →</a>
+    </div>
+    <div class="hero-meta">
+      <p>신청 기관명 : <span>성균관대학교</span></p>
+      <p>기관 구분 : <span>대학</span> &nbsp;·&nbsp; 교육 유형 : <span>해외교육형</span></p>
+      <p>창업 업종 : <span>비제조업</span> &nbsp;·&nbsp; 기술 분야 : <span>IT</span></p>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-blob"></div>
+    <div class="phone-mockup">
+      <div class="phone-notch"></div>
+      <div class="phone-header">
+        <div class="phone-header-icon">
+          <svg viewBox="0 0 20 20"><circle cx="12" cy="10" r="7" stroke="white" stroke-width="2" fill="none"/><circle cx="12" cy="10" r="4" fill="white"/><path d="M12 4l.01-.01M12 16l.01-.01" stroke="white" stroke-width="0"/><rect x="3" y="5" width="1.5" height="7" rx=".75" fill="white"/><circle cx="3.75" cy="4" r="1.2" fill="white"/></svg>
+        </div>
+        <span class="phone-header-title">YUMCHECK 분석 중...</span>
+      </div>
+      <div class="phone-food-img">
+        🍲
+        <div class="scan-line"></div>
+      </div>
+      <div class="food-name">김치찌개</div>
+      <div class="ingredient-list">
+        <div class="ingredient-item">
+          <div class="ingredient-dot"></div>김치
+        </div>
+        <div class="ingredient-item danger">
+          <div class="ingredient-dot"></div>돼지고기 ⚠️
+        </div>
+        <div class="ingredient-item">
+          <div class="ingredient-dot"></div>두부
+        </div>
+      </div>
+      <div class="allergy-alert">
+        <div class="alert-title">⚠️ 알러지 위험</div>
+        <div class="alert-body">
+          경고 식품 : <strong>돼지 고기</strong><br>
+          이 음식에는 '<strong>돼지 고기</strong>' 성분이 포함되어 있습니다. 섭취에 주의하세요.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>SCROLL</span>
+    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num">
+      <span class="counting" data-target="94" data-suffix="%">0%</span>
+    </div>
+    <div class="stat-label">음식 인식 정확도</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">
+      <span class="counting" data-target="1000" data-suffix="+">0+</span>
+    </div>
+    <div class="stat-label">학습된 한국 음식 종류</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">
+      <span class="counting" data-target="2" data-float="true" data-suffix="초">0초</span>
+    </div>
+    <div class="stat-label">평균 분석 소요 시간</div>
+  </div>
+</div>
+
+<!-- ── PROBLEM ── -->
+<section class="section problem" id="problem">
+  <div class="problem-inner">
+    <div class="problem-header">
+      <div class="section-tag reveal">문제 인식</div>
+      <h2 class="section-title reveal">식품 알러지,<br>지금도 위험합니다</h2>
+      <p class="section-desc reveal">국내 식품 알러지 환자는 매년 증가하고 있으나 외식 환경에서 성분을 확인하기 어렵습니다.</p>
+    </div>
+    <div class="problem-cards">
+      <div class="problem-card reveal">
+        <span class="problem-icon">🏥</span>
+        <h3>연간 알러지 응급 환자</h3>
+        <p>국내에서 매년 수만 명이 식품 알러지로 응급실을 방문합니다. 그 중 상당수는 성분 확인 미비로 인한 사고입니다.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-icon">🍽️</span>
+        <h3>외식 메뉴 성분 불투명</h3>
+        <p>식당 메뉴판에는 알러지 유발 성분이 표시되지 않는 경우가 많아 소비자가 직접 확인하기 어렵습니다.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-icon">📱</span>
+        <h3>기존 솔루션의 한계</h3>
+        <p>바코드 기반 앱은 가공식품에만 적용되고, 실제 조리된 음식의 성분을 실시간으로 파악하는 서비스가 없습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PIPELINE ── -->
+<section class="section pipeline" id="pipeline">
+  <div class="pipeline-inner">
+    <div class="pipeline-header">
+      <div class="section-tag reveal">핵심 기술</div>
+      <h2 class="section-title reveal">YumCheck 파이프라인</h2>
+      <p class="section-desc reveal">촬영 한 장으로 멀티 모달 AI가 즉시 분석합니다. 단계를 클릭해 자세히 알아보세요.</p>
+    </div>
+
+    <div class="pipeline-flow reveal">
+      <div class="pipeline-step active" data-index="0">
+        <div class="pipeline-step-num">STEP 01</div>
+        <div class="pipeline-step-icon">📱</div>
+        <div class="pipeline-step-name">YUM CHECK</div>
+      </div>
+      <div class="pipeline-arrow">›</div>
+      <div class="pipeline-step" data-index="1">
+        <div class="pipeline-step-num">STEP 02</div>
+        <div class="pipeline-step-icon">📸</div>
+        <div class="pipeline-step-name">음식 촬영</div>
+      </div>
+      <div class="pipeline-arrow">›</div>
+      <div class="pipeline-step" data-index="2">
+        <div class="pipeline-step-num">STEP 03</div>
+        <div class="pipeline-step-icon">🧠</div>
+        <div class="pipeline-step-name">CNN 파트</div>
+      </div>
+      <div class="pipeline-arrow">›</div>
+      <div class="pipeline-step" data-index="3">
+        <div class="pipeline-step-num">STEP 04</div>
+        <div class="pipeline-step-icon">💬</div>
+        <div class="pipeline-step-name">LLM 파트</div>
+      </div>
+      <div class="pipeline-arrow">›</div>
+      <div class="pipeline-step" data-index="4">
+        <div class="pipeline-step-num">STEP 05</div>
+        <div class="pipeline-step-icon">🔔</div>
+        <div class="pipeline-step-name">결과 전달</div>
+      </div>
+    </div>
+
+    <div class="pipeline-detail reveal">
+      <div class="pipeline-detail-text">
+        <h3>YUM CHECK 앱</h3>
+        <p>사용자가 YumCheck 앱을 실행하고 알러지 및 식이제한 정보를 사전에 등록합니다. 개인화된 프로필 기반으로 맞춤 분석을 제공합니다.</p>
+      </div>
+      <div class="pipeline-detail-visual">
+        <div class="detail-tag">iOS / Android</div>
+        <div class="detail-tag">프로필 등록</div>
+        <div class="detail-tag">알러지 설정</div>
+        <div>
+          <div class="detail-bar-label"><span>사용자 편의성</span><span>95%</span></div>
+          <div class="detail-bar"><div class="detail-bar-fill" style="width:95%"></div></div>
+        </div>
+        <div>
+          <div class="detail-bar-label"><span>설정 완성도</span><span>88%</span></div>
+          <div class="detail-bar"><div class="detail-bar-fill" style="width:88%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section class="section features" id="features">
+  <div class="features-inner">
+    <div class="features-header">
+      <div class="section-tag reveal" style="color:#7ec85a;">주요 기능</div>
+      <h2 class="section-title reveal">개인 맞춤형<br>AI 알러지 분석</h2>
+      <p class="section-desc reveal">음식 사진으로 사용자 정보인 알러지와 식이제한 등 멀티 모달 AI 기반 개인 맞춤형 알림 서비스</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap">🎯</div>
+        <h3>실시간 알러지 감지</h3>
+        <p>음식 사진을 찍으면 2초 이내에 알러지 유발 성분을 감지하고 즉각 경고합니다.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap">👤</div>
+        <h3>개인 프로필 맞춤</h3>
+        <p>사용자의 알러지 및 식이제한 정보를 등록하여 완전히 개인화된 분석 결과를 제공합니다.</p>
+      </div>
+      <div class="feature-card large reveal">
+        <div>
+          <div class="feature-icon-wrap">📊</div>
+          <h3>멀티 모달 AI 분석</h3>
+          <p>CNN 이미지 인식과 LLM 자연어 처리를 결합한 강력한 멀티 모달 파이프라인으로 높은 정확도를 실현합니다. 단순 성분 목록 나열을 넘어 위험도 등급과 대체 식품까지 종합적으로 안내합니다.</p>
+        </div>
+        <div class="feature-visual">
+          <div class="fv-row">
+            <div class="fv-dot green"></div>
+            <div class="fv-label">안전</div>
+            <div class="fv-bar"><div class="fv-bar-fill green" style="width:78%"></div></div>
+          </div>
+          <div class="fv-row">
+            <div class="fv-dot orange"></div>
+            <div class="fv-label">주의</div>
+            <div class="fv-bar"><div class="fv-bar-fill orange" style="width:15%"></div></div>
+          </div>
+          <div class="fv-row">
+            <div class="fv-dot gray"></div>
+            <div class="fv-label">위험</div>
+            <div class="fv-bar"><div class="fv-bar-fill gray" style="width:7%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap">🌏</div>
+        <h3>한국 음식 특화</h3>
+        <p>한국 음식 1,000종 이상 학습 데이터로 한식 특유의 복잡한 양념과 부재료까지 정밀 인식합니다.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap">🔔</div>
+        <h3>즉각 푸시 알림</h3>
+        <p>위험 성분 감지 즉시 직관적인 경고 메시지와 함께 심각도 등급을 사용자에게 알립니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section how" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="section-tag reveal">이용 방법</div>
+      <h2 class="section-title reveal">4단계로 끝나는<br>알러지 체크</h2>
+      <p class="section-desc reveal">복잡한 성분표를 읽을 필요 없이 사진 한 장으로 즉시 확인하세요.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step reveal">
+        <div class="how-step-num">1</div>
+        <h3>앱 실행 & 프로필 등록</h3>
+        <p>YumCheck를 실행하고 나의 알러지와 식이제한 정보를 한 번만 등록합니다.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="how-step-num">2</div>
+        <h3>음식 사진 촬영</h3>
+        <p>식당에서 주문 전, 또는 마트에서 구매 전 음식을 카메라로 찍습니다.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="how-step-num">3</div>
+        <h3>AI 즉시 분석</h3>
+        <p>CNN + LLM 파이프라인이 2초 이내에 성분을 분석하고 위험 요소를 탐지합니다.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="how-step-num">4</div>
+        <h3>결과 확인 & 안심</h3>
+        <p>위험 성분과 안전 여부를 직관적으로 확인하고 안심하고 식사를 즐기세요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta" id="cta">
+  <div class="cta-inner">
+    <div class="cta-badge reveal">Check It. Yum It.</div>
+    <h2 class="reveal">지금 바로<br>안전하게 드세요</h2>
+    <p class="reveal">AI가 대신 성분을 확인해 드립니다.<br>더 이상 알러지 걱정 없이 맛있는 식사를 즐기세요.</p>
+    <div class="cta-actions reveal">
+      <a href="#" class="btn-primary">
+        🍎 App Store 다운로드
+      </a>
+      <a href="#" class="btn-outline">
+        🤖 Google Play 다운로드
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">YUMCHECK</div>
+        <div class="footer-brand-tagline">AI가 음식성분을 분석해 알러지 위험을 알려주는 스마트 푸드 체크 서비스</div>
+      </div>
+      <div class="footer-info">
+        <p>신청 기관명 : <span>성균관대학교</span></p>
+        <p>기관 구분 : <span>대학</span></p>
+        <p>교육 유형 : <span>해외교육형</span></p>
+        <p>창업 업종 : <span>비제조업</span></p>
+        <p>기술 분야 : <span>IT</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 YUMCHECK. All rights reserved.</p>
+      <p class="footer-event">2026 실험실창업탐색팀(Tex-Corps) 발표평가</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
