@@ -1,0 +1,15 @@
+{
+  "name": "YumCheck",
+  "short_name": "YumCheck",
+  "description": "Check It. Yum It. — 음식 알러지·식이 제한 체크",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#4a6f1e",
+  "theme_color": "#4a6f1e",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
