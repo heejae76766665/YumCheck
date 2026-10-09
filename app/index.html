@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#4a6f1e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="YumCheck" />
+  <title>YumCheck</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Inter:wght@400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar" id="topbar">
+      <button class="brand" data-go="home" aria-label="YumCheck home">
+        <svg viewBox="0 0 48 40" fill="none" aria-hidden="true"><ellipse cx="6" cy="10" rx="3.6" ry="5" fill="currentColor"/><rect x="4.6" y="12" width="2.8" height="22" rx="1.4" fill="currentColor"/><circle cx="29" cy="20" r="15.5" stroke="currentColor" stroke-width="3"/><circle cx="29" cy="20" r="10.5" fill="currentColor"/><path d="M24 20.5l3.6 3.6 7-7.4" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>YUMCHECK</span>
+      </button>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button data-lang="ko">KO</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <main id="view"></main>
+
+    <nav class="tabbar" id="tabbar">
+      <button data-go="home" class="tab" data-tab="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+        <span data-i18n="tabHome"></span>
+      </button>
+      <button class="tab-scan" data-action="camera" aria-label="Take photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+      </button>
+      <button data-go="profile" class="tab" data-tab="profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <span data-i18n="tabProfile"></span>
+      </button>
+    </nav>
+
+    <!-- 카메라: 스마트폰에서는 바로 후면 카메라가 열림 -->
+    <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+    <input type="file" id="galleryInput" accept="image/*" hidden />
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

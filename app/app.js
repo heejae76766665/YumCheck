@@ -280,7 +280,7 @@
         return `
           <section class="ob-welcome">
             <div class="ob-logo">
-              <svg viewBox="0 0 40 40" fill="none"><circle cx="24" cy="20" r="14" stroke="#fff" stroke-width="3"/><circle cx="24" cy="20" r="9" fill="#fff"/><path d="M19 20l3 3 5-5" stroke="#4a6f1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="9" width="3" height="14" rx="1.5" fill="#fff"/><circle cx="7.5" cy="7" r="2.5" fill="#fff"/></svg>
+              <svg viewBox="0 0 48 40" fill="none"><ellipse cx="6" cy="10" rx="3.6" ry="5" fill="#fff"/><rect x="4.6" y="12" width="2.8" height="22" rx="1.4" fill="#fff"/><circle cx="29" cy="20" r="15.5" stroke="#fff" stroke-width="3"/><circle cx="29" cy="20" r="10.5" fill="#fff"/><path d="M24 20.5l3.6 3.6 7-7.4" stroke="#4a6f1e" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span>YUMCHECK</span>
             </div>
             <h1>${t('obWelcomeTitle')}</h1>
